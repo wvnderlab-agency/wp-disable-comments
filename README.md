@@ -2,7 +2,7 @@
 
 ![PHP](https://img.shields.io/badge/PHP-8.0+-777BB4?logo=php)
 ![WordPress](https://img.shields.io/badge/WordPress-MU--Plugin-21759B?logo=wordpress)
-![WP Coding Standards](https://github.com/wvnderlab-agency/wp-disable-comments/actions/workflows/wp-coding-standards.yml/badge.svg)](https://github.com/wvnderlab-agency/wp-disable-comments/actions/workflows/wp-coding-standards.yml)
+[![WP Coding Standards](https://github.com/wvnderlab-agency/wp-disable-comments/actions/workflows/wp-coding-standards.yml/badge.svg)](https://github.com/wvnderlab-agency/wp-disable-comments/actions/workflows/wp-coding-standards.yml)
 
 - [Installation](#installation)
 - [Usage](#usage)
