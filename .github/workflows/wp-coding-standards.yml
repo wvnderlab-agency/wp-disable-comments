@@ -27,4 +27,4 @@ jobs:
         run: composer install --no-interaction --prefer-dist --no-progress
 
       - name: Run PHP CodeSniffer
-        run: composer analyse
+        run: composer analyze
