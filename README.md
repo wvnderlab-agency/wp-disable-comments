@@ -84,7 +84,7 @@ composer install
 ### Analyse Code-Quality with WP-Coding-Standards
 
 ```shell
-composer analyse
+composer analyze
 ```
 
 ### Refactor Code along WP-Coding-Standards

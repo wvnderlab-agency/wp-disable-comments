@@ -34,7 +34,7 @@
         }
     },
     "scripts": {
-        "analyse": [
+        "analyze": [
             "phpcs -ps"
         ],
         "refactor": [
