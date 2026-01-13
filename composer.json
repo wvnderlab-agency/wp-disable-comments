@@ -1,0 +1,44 @@
+{
+    "$schema": "https://getcomposer.org/schema.json",
+    "name": "wvnderlab-agency/wp-disable-comments",
+    "description": "A simple WordPress mu-plugin to disable comments.",
+    "type": "wordpress-muplugin",
+    "license": "MIT",
+    "homepage": "https://wvnderlab.com",
+    "keywords": [
+        "wordpress",
+        "wordpress-muplugin",
+        "wordpress-plugin"
+    ],
+    "support": {
+        "issues": "https://github.com/wvnderlab-agency/wp-disable-comments/issues",
+        "source": "https://github.com/wvnderlab-agency/wp-disable-comments"
+    },
+    "authors": [
+        {
+            "name": "johninamillion",
+            "email": "john@wvnderlab.com",
+            "homepage": "https://github.com/johninamillion",
+            "role": "Backend Developer"
+        }
+    ],
+    "require": {
+        "php": ">=8.0"
+    },
+    "require-dev": {
+        "wp-coding-standards/wpcs": "^3.0"
+    },
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    },
+    "scripts": {
+        "analyse": [
+            "phpcs -ps"
+        ],
+        "refactor": [
+            "phpcbf -ps"
+        ]
+    }
+}

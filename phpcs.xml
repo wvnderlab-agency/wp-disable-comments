@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<ruleset name="WordPress Coding Standards">
+    <description>WordPress coding standards</description>
+
+    <config name="php_version" value="80100"/>
+    <config name="encoding" value="utf-8"/>
+
+    <file>.</file>
+
+    <exclude-pattern>.git/*</exclude-pattern>
+    <exclude-pattern>vendor/*</exclude-pattern>
+
+    <rule ref="WordPress">
+        <!-- Allow modern namespaced hooks -->
+        <exclude name="WordPress.NamingConventions.ValidHookName.UseUnderscores"/>
+    </rule>
+    <rule ref="WordPress-Docs">
+        <exclude name="Squiz.Commenting.BlockComment.HasEmptyLineBefore"/>
+        <!-- Plugin header is enough -->
+        <exclude name="Squiz.Commenting.FileComment.Missing"/>
+        <exclude name="Squiz.Commenting.FileComment.WrongStyle"/>
+    </rule>
+    <rule ref="WordPress-Extra"/>
+
+</ruleset>

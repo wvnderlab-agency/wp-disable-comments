@@ -1,0 +1,19 @@
+# Operating System Files
+.DS_Store
+Thumbs.db
+
+# IDEs
+/.cursor
+/.fleet
+/.idea
+/.junie
+/.nova
+/.vscode
+/.zed
+
+# Log Files
+*.log
+
+# Composer Files
+composer.lock
+/vendor
