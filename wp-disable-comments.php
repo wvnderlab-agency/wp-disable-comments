@@ -24,7 +24,6 @@ namespace WvnderlabAgency\DisableComments;
 
 use WP_Admin_Bar;
 use WP_Comment;
-use WP_Post;
 
 defined( 'ABSPATH' ) || die;
 
@@ -354,23 +353,44 @@ add_filter( 'xmlrpc_methods', __NAMESPACE__ . '\\remove_xmlrpc_comments_methods'
 /**
  * Unregister Comment Blocks
  *
- * @link   https://developer.wordpress.org/reference/hooks/init/
- * @hooked action init
+ * @link   https://developer.wordpress.org/reference/hooks/admin_print_scripts/
+ * @hooked action admin_print_scripts
  *
  * @return void
  */
 function unregister_comment_blocks(): void {
-	unregister_block_type( 'core/comments' );
-	unregister_block_type( 'core/comment-author-name' );
-	unregister_block_type( 'core/comment-edit-link' );
-	unregister_block_type( 'core/comment-content' );
-	unregister_block_type( 'core/comment-date' );
-	unregister_block_type( 'core/comment-reply-link' );
-	unregister_block_type( 'core/comment-template' );
-	unregister_block_type( 'core/post-comments-form' );
+	$blocks = array(
+		'core/comment-author-avatar',
+		'core/comment-author-name',
+		'core/comment-content',
+		'core/comment-date',
+		'core/comment-edit-link',
+		'core/comment-reply-link',
+		'core/comment-template',
+		'core/comments',
+		'core/comments-pagination',
+		'core/comments-pagination-next',
+		'core/comments-pagination-numbers',
+		'core/comments-pagination-previous',
+		'core/comments-title',
+		'core/latest-comments',
+		'core/post-comments-count',
+		'core/post-comments-form',
+		'core/post-comments-link',
+	);
+
+	echo '<script type="text/javascript">';
+	echo "addEventListener('DOMContentLoaded', function() {";
+	echo 'window.wp.domReady( function() {';
+	foreach ( $blocks as $block ) {
+		echo "window.wp.blocks.unregisterBlockType( '" . esc_js( $block ) . "' );";
+	}
+	echo '} );';
+	echo '} );';
+	echo '</script>';
 }
 
-add_action( 'init', __NAMESPACE__ . '\\unregister_comment_blocks', PHP_INT_MAX );
+add_action( 'admin_print_scripts', __NAMESPACE__ . '\\unregister_comment_blocks', PHP_INT_MAX );
 
 /**
  * Unregister Comments Widget
