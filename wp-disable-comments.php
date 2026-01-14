@@ -6,7 +6,7 @@
  * Author:          Wvnderlab Agency
  * Author URI:      https://wvnderlab.com
  * Text Domain:     wvnderlab-disable-comments
- * Version:         0.1.0
+ * Version:         0.1.1
  */
 
 /*
